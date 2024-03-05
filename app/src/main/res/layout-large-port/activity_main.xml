@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:src="@drawable/logo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        />
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        >
+
+        <TableRow android:layout_marginBottom="40dp"
+            tools:ignore="ExtraText">
+o
+            <EditText
+                android:id="@+id/numero"
+                android:width="500dp"
+                android:layout_height="90dp"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:maxLength="9"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+        <TableRow android:layout_marginBottom="40dp">
+            <Spinner
+                android:id="@+id/filiere"
+                android:layout_height="90dp"
+                android:entries="@array/filiere"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="40dp">
+            <Spinner
+                android:id="@+id/nivo"
+                android:layout_height="90dp"
+                android:entries="@array/nivo"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="40dp">
+            <Spinner
+                android:id="@+id/langue"
+                android:layout_height="90dp"
+                android:entries="@array/langue"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/connexion"
+                android:text="@string/Connexion"
+                android:layout_height="90dp"/>
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
